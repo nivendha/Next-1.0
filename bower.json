@@ -1,0 +1,29 @@
+{
+  "name": "next",
+  "version": "0.1.0",
+  "description": "Node RIA",
+  "homepage": "",
+  "authors": [
+    "knivendha@gmail.com"
+  ],
+  "contributors": [],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "materialize": "~0.97.0"
+  },
+  "directory": "app/public/components",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nivendha"
+  },
+  "resolutions": {
+    "angular": "~1.4.3"
+  }
+}
