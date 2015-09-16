@@ -8,14 +8,14 @@ var ejs = require('ejs');
 var RV_LOGIN = '/login',
 RV_DASHBOARD = '/my-account';
 
-
-module.exports = function(app) {
-
+module.exports = function(app,main) {
+	var m=main;
 	app.get('/', function(request, response){
 	var cookies = new Cookies(request, response);
 		if (cookies.get('uuid') && cookies.get('token')) {
 			response.redirect(RV_LOGIN);
 		} else {
+			//var t=main.getLoginComponent();
 			response.render('login.html');
 		}
 	});

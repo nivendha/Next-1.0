@@ -7,9 +7,16 @@ var test=nx.core.compRegistry;
 
 console.log("testing:"+test());*/
 
-var nx=require('require-namespace');
+
+
+
+module.exports = function(nx){
 nx.createSync(__dirname + '/core', 'core');
+nx.createSync(__dirname + '/layout', 'layout');
+
+var layoutTemp= require('./layout/loginLayout.js')();
 
 
 
-module.exports = nx.core;
+ return layoutTemp;
+};

@@ -1,7 +1,7 @@
 {
   "name": "Next",
   "version": "0.1.0",
-    "scripts": {
+  "scripts": {
     "start": "bower install && node app.js"
   },
   "dependencies": {
@@ -10,6 +10,12 @@
     "cookies": "^0.5.0",
     "ejs": "^2.3.3",
     "express": "^4.12.4",
+    "gulp": "^3.9.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-ejs": "^1.2.0",
+    "gulp-ejs-precompiler": "^0.2.0",
+    "gulp-insert": "^0.5.0",
+    "gulp-plumber": "^1.0.1",
     "pg": "^4.1.1",
     "request": "^2.51.0",
     "require-namespace": "^0.3.44"

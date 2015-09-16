@@ -1,6 +1,7 @@
 var http = require('http');
 var express = require('express');
 var bodyParser = require('body-parser');
+var nx=require('require-namespace');
 
 var app = express();
 app.set('port', process.env.PORT || 8077);
@@ -20,16 +21,13 @@ var test=nx.core.compRegistry;
 console.log("testing:"+test());*/
 
 
-var main=require("./app/main");
+var main=require("./next/main")(nx);
 
-require('./app/routes')(app);
+require('./app/routes')(app,main);
 
 http.createServer(app).listen(app.get('port'), function(){
 	console.log('Express server listening on port ' + app.get('port'));
 });
-
-
-
 
 Object.defineProperty(global, '__stack', {
   get: function(){
